@@ -1,1 +1,137 @@
-BWRLD 2025 - layton's lollies - we are coding this page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layton's Lollies</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f0f0f0; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+        }
+
+        .navbar {
+            background-color: #000; /* Black navbar */
+            color: #fff; /* White text on navbar */
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between; /* Logo on left, links on right */
+            align-items: center; /* Vertically center content */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px; /* Space between links */
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .nav-links a:hover {
+            background-color: #333; /* Darker background on hover */
+        }
+
+
+        section {
+            padding: 2rem;
+            margin: 2rem auto; /* Center sections */
+            max-width: 900px; /* Limit width for readability */
+            background-color: #fff; /* White section background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 8px; /* Rounded corners for sections */
+        }
+
+        h2 {
+            color: #007bff; /* Blue headings */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Layton's Lollies</div>
+        <div class="nav-links">
+            <a href="#featured">Featured</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="/pay">Pay</a>
+        </div>
+    </nav>
+
+    <section id="featured">
+        <h2>Featured Lollies</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="placeholder.jpg" alt="Lolly 1">
+                <h3>Rainbow Swirl</h3>
+                <p>Delicious fruity flavors!</p>
+            </div>
+            <div class="product-card">
+                <img src="placeholder.jpg" alt="Lolly 2">
+                <h3>Chocolate Fudge Pop</h3>
+                <p>Rich and creamy chocolate.</p>
+            </div>
+            </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Layton's Lollies is a family-owned candy shop dedicated to creating the most delicious and delightful lollies. We use only the finest ingredients and time-honored recipes to bring you treats that will tantalize your taste buds.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>123 Candy Lane, Sweetville</p>
+        <p>Email: info@laytonslollies.com</p>
+        <p>Phone: 555-123-4567</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Layton's Lollies
+    </footer>
+
+</body>
+</html>
+
