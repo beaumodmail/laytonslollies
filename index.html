@@ -146,7 +146,52 @@
                 <img src="placeholder.jpg" alt="Lolly 2">
                 <h3>Blue Pepsi</h3>
                 <p>Good ol' pepsi, but BLUE? 🤔</p>
-                <h4>£1<s><h4>.50</h4></s></h4>
+                <h4>£1<s>.50</s></h4>
+                <style>
+.paypal-button {
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  min-width: 15rem;
+  padding: 0.75rem 2.5rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #FFD140;
+  color: #000000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.paypal-button:hover {
+  background-color: #FFC226;
+  transform: scale(1.05);
+}
+
+.paypal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.paypal-info img {
+  height: 1rem;
+  margin-top: 0.5rem;
+}
+</style>
+
+<form action="https://www.paypal.com/ncp/payment/D99L6GGF346MA" method="post" target="_blank" style="display:inline-grid; justify-items:center; align-content:start; gap:0.5rem;">
+  <input class="paypal-button" type="submit" value="Buy Now" />
+  <div class="paypal-info">
+    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+    <span>Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:1rem; vertical-align:middle;" /></span>
+  </div>
+</form>
+
             </div>
         </div>
     </section>
