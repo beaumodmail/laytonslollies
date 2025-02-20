@@ -3,363 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layton's Deals</title>
+    <title>Maintenance Mode</title>
     <style>
         body {
             font-family: sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-                .paypal-button-container {
+            background-color: #f4f4f4; /* Light gray background */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            margin-top: 1rem;
-        }
-
-        .navbar {
-            background-color: #000;
-            color: #fff;
-            padding: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-left: 20px;
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 10px;
-            margin-right: 20px;
-            flex-wrap: wrap;
             justify-content: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            margin: 0; /* Remove default margins */
         }
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h1 {
+            color: #333; /* Dark gray heading */
+        }
+
+        p {
+            color: #666; /* Slightly lighter gray text */
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 2em; /* Larger emojis */
+            margin: 0 5px; /* Add some spacing between emojis */
+            animation: bounce 1s infinite; /* Add a subtle bounce animation */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40%, 60% {
+                transform: translateY(-5px); /* Adjust bounce height */
+            }
+        }
+
+        .mic-container { /* Style for the microphone */
+            width: 50px;
+            height: 50px;
+            background-color: #ddd; /* Light gray mic background */
+            border-radius: 50%; /* Make it circular */
+            margin: 20px auto; /* Center the mic */
+            position: relative; /* For positioning the cord */
+        }
+
+        .mic-head { /* Microphone head */
+            width: 30px;
+            height: 20px;
+            background-color: #333; /* Dark gray mic head */
             border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-bottom: 0.5rem;
+            position: absolute;
+            top: 15px;
+            left: 10px;
         }
 
-        .nav-links a:hover {
-            background-color: #333;
+        .mic-cord { /* Microphone cord */
+            width: 2px;
+            height: 20px;
+            background-color: #666; /* Gray cord */
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%); /* Center the cord */
         }
-
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem 0.5rem;
-            }
-
-            .logo {
-                margin: 0 auto 0.5rem;
-                text-align: center;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-                margin-right: 0;
-            }
-
-            .nav-links a {
-                width: 100%;
-                text-align: center;
-                display: block; /* Key for centering within full width */
-                padding: 0.5rem 1rem; /* Restore padding if needed */
-                box-sizing: border-box; /* Include padding in width */
-            }
-        }
-
-        section {
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 900px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        h2 {
-            color: #007bff;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-            s {
-    color: red;
-    }
-        .black {
-            color: black;
-            .okay {
-                text-align: center;
-            }
     </style>
-
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Layton's Deals</div>
-        <div class="nav-links">
-            <a href="#featured">Products</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="/pay">Pay</a>
+    <div class="container">
+        <h1>Under Maintenance</h1>
+        <p>We're currently working on improving our site.  We'll be back shortly! 🛠️🔧</p>
+        <p>Please check back later. 🙏</p>
+
+        <div class="mic-container">
+            <div class="mic-head"></div>
+            <div class="mic-cord"></div>
         </div>
-    </nav>
-<section id="about">
-        <h2>About Us</h2>
-        <p>Layton's Deals is a great place to find a bargin!</p>
-    </section>
-    <section>
-        <video class="responsive-video" controls>
-  <source src="your-video.MP4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
-<style>
-.responsive-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-</style>
-
-
-    </section>
-    <section id="featured">
-        
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <img src="3566a103-9363-40ae-86c4-d3f056486a7b.jpeg" alt="PLACEHOLDER">
-                <h3>Blue Pepsi</h3>
-                
-                <h4>£1.20</h4>
-                
-                <style>
-.paypal-button {
-  text-align: center;
-  border: none;
-  border-radius: 0.5rem;
-  min-width: 15rem;
-  padding: 0.75rem 2.5rem;
-  height: 3rem;
-  font-weight: bold;
-  background-color: #FFD140;
-  color: #000000;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.paypal-button:hover {
-  background-color: #FFC226;
-  transform: scale(1.05);
-}
-
-.paypal-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.paypal-info img {
-  height: 1rem;
-  margin-top: 0.5rem;
-}
-</style>
-
-<form action="https://www.paypal.com/ncp/payment/D99L6GGF346MA " method="post" target="_blank" style="display:inline-grid; justify-items:center; align-content:start; gap:0.5rem;">
-  <input class="paypal-button" type="submit" value="Buy Now" />
-  <div class="paypal-info">
-    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-   
-  </div>
-</form>
-            </div>
-            <div class="product-card">
-                <img src="51302b67-b953-4f50-9c19-1daa5485c35e.jpeg" alt="PLACEHOLDER">
-                <h3>Tounge Painter Gum</h3>
-                
-                <h4>£1</h4>
-                <style>
-.paypal-button {
-  text-align: center;
-  border: none;
-  border-radius: 0.5rem;
-  min-width: 15rem;
-  padding: 0.75rem 2.5rem;
-  height: 3rem;
-  font-weight: bold;
-  background-color: #FFD140;
-  color: #000000;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.paypal-button:hover {
-  background-color: #FFC226;
-  transform: scale(1.05);
-}
-
-.paypal-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.paypal-info img {
-  height: 1rem;
-  margin-top: 0.5rem;
-}
-</style>
-
-<form action="https://www.paypal.com/ncp/payment/JN3P66P8YQXUE" method="post" target="_blank" style="display:inline-grid; justify-items:center; align-content:start; gap:0.5rem;">
-  <input class="paypal-button" type="submit" value="Buy Now" />
-  <div class="paypal-info">
-    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-
-  </div>
-</form>
-
-            </div>
-        </div>
-    </section>
-
-    
-     <section id="amazonahh">
-         <div class="black">
-             <style>
-                 .oftenb {
-                     color: black;
-                 }
-             </style>
-        <h2 class="oftenb">Often bought together!</h2>
-         </div>
-         <h2>Blue Bundle</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="51302b67-b953-4f50-9c19-1daa5485c35e.jpeg" alt="PLACEHOLDER">
-                <h3>Blue Rasperry Tounge Painter Gum</h3>
-                
-            </div>
-            <div class="product-card">
-                <img src="3566a103-9363-40ae-86c4-d3f056486a7b.jpeg" alt="PLACEHOLDER">
-                <h3>Blue Pepsi</h3>
-               
-                
-            </div>
-        </div>
-         <h2 class="oftenb">£2.00 for both!</h2>
-                         <style>
-.paypal-button {
-  text-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 0.5rem;
-  min-width: 15rem;
-  padding: 0.75rem 2.5rem;
-  height: 3rem;
-  font-weight: bold;
-  background-color: #FFD140;
-  color: #000000;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.paypal-button:hover {
-  background-color: #FFC226;
-  transform: scale(1.05);
-}
-
-.paypal-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.paypal-info img {
-  height: 1rem;
-  margin-top: 0.5rem;
-}
-</style>
-<div class="paypal-button-container">
-<form action="https://www.paypal.com/ncp/payment/QYPWDMBGG5BPN" method="post" target="_blank" style="display:inline-grid; justify-items:center; align-content:start; gap:0.5rem;">
-  <input class="paypal-button" type="submit" value="Buy Now" />
-  <div class="paypal-info">
-    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-   
-  </div>
-</form>
-</div>
-     </section>
-            
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>We do accept cash, contact us for pick!</p>
-        <p>Settle and Area</p>
-        <p>Email: beau@bwrld.uk</p>
-        
-        <p>Development and Product Management: +44 7526 979863 </p>
-    </section>
-
-    <footer>
-        &copy; 2025 Layton's Deals
-    </footer>
+    </div>
 
 </body>
 </html>
+
